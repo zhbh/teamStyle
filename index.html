@@ -13,8 +13,7 @@
 					return {
 						webKit : u.indexOf('AppleWebKit') > -1, 
 						ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), 
-						android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
-						
+						android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1
 					};
 				}( )
 			};

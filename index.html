@@ -6,6 +6,24 @@
 	    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no" />
 	    <title>你的团队是什么鬼？WTF:What Team do you F**k?</title>
 	    <link rel="stylesheet" href="css/index.css" />
+	    <script type="text/javascript">
+			 var browser={
+				versions : function(){
+					var u = navigator.userAgent;
+					return {
+						webKit : u.indexOf('AppleWebKit') > -1, 
+						ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), 
+						android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
+						
+					};
+				}( )
+			};
+
+			if ( !browser.versions.android || !browser.versions.ios ){	
+				self.location = "http://zhbh.github.io/teamStyle/scan.html";
+			}
+
+	    </script>
 	</head>
 	<body>
 		<section class="ui-mask">

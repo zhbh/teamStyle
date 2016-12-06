@@ -6,18 +6,49 @@
 	    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no" />
 	    <title>你的团队是什么鬼？WTF:What Team do you F**k?</title>
 	    <link rel="stylesheet" href="css/index.css" />
+	    <script type="text/javascript">
+			 var browser={
+				versions : function(){
+					var u = navigator.userAgent;
+					return {
+						webKit : u.indexOf('AppleWebKit') > -1, 
+						ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), 
+						android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
+						
+					};
+				}( )
+			};
+
+			if ( !( browser.versions.android || browser.versions.ios ) ){	
+				self.location = "http://zhbh.github.io/teamStyle/scan.html";
+			}
+
+	    </script>
 	</head>
 	<body>
+		<section class="ui-mask">
+			<div class="ui-loading"></div>
+		</section>
 		<div class="ui-content">
-			<div class="animate-fade animate-fade-one"></div>
-			<div class="animate-fade animate-fade-two"></div>
-			<div class="animate-fade animate-fade-three"></div>
-			<div class="ui-btn-layout">
+			<img src="img/bg_index.jpg" class="ui-bg-img" />
+			<div class="ui-btn-layout" style="display: none;">
 				<a href="choices.html" class="ui-btn">开始测试</a>
 			</div>
 		</div>
 		<script language="javascript"> 
 	    	document.body.addEventListener('touchmove', function(e){ e.preventDefault(); }); 
+	    	window.onload = function() {
+	    		var divArr = [];
+	    		for( var i = 0; i < 3; i++ ) {
+	    			divArr[i] = document.createElement( 'div' );
+	    			divArr[i].className = 'animate-fade animate-fade' + i;
+	    			document.querySelector( '.ui-content' ).appendChild( divArr[i] );
+	    		}
+	    		
+	    		document.querySelector( '.ui-content' ).style.backgroundColor = '#001157';
+	    		document.querySelector( '.ui-mask' ).style.display = 'none';
+	    		document.querySelector( '.ui-btn-layout' ).style.display = 'block';
+	    	};
 	    </script>
 	</body>
 </html>

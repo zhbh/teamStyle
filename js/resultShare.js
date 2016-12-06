@@ -49,7 +49,7 @@ var companyObj = {
 	},
 	'腾讯' : {
 		nid : 'tengxun',
-		slogen : '就可以送朋友一年的会员了'//'就可以送朋友Q币和4个太阳的QQ了'
+		slogen : '就可以送朋友一年的会员了'
 	}
 };
 
@@ -90,30 +90,9 @@ $(function(){
 		$( 'body' ).on( 'touchmove touchstart', function ( event ) {
 		    event.preventDefault( );
 		} );
-
-		$( '.ui-content' ).swipeUp( function( e ) {
-		
-	        $(this).removeClass( 'fn-move-prev' ).addClass( 'fn-move-next' );
-		
-	    } ).swipeDown( function( e ) {
-	     
-	        $( this ).removeClass( 'fn-move-next' ).addClass( 'fn-move-prev' );
-	        
-	    } );
-	        
-		
-		$( '.ui-arrow' ).on( 'tap', function( e ) {
-			$( '.ui-content' ).removeClass( 'fn-move-prev' ).addClass( 'fn-move-next' );
+		$( '.ui-btn' ).on( 'tap', function(){
+			window.location.href = 'index.html';
 		} );
-		
-		$( '.ui-btn' ).on( 'tap', function( e ) { 
-			$( '.ui-mask' ).hasClass( 'fn-hide' ) ? $( '.ui-mask' ).removeClass( 'fn-hide' ) : $( '.ui-mask' ).addClass( 'fn-hide' );
-		} );
-		
-		$( '.ui-mask' ).on( 'tap', function( e ) { 
-			$( this ).addClass( 'fn-hide' );
-		} );
-		
 	};
 	
 	ResultShare.prototype.getURLObject = function( url ) {
@@ -121,7 +100,7 @@ $(function(){
 	    
 	    var search = url.substring( url.lastIndexOf( '?' ) + 1 ),
 	    	obj = {},
-	    	reg = /([^?&=]+)=([^?&=#]*)/g;
+	    	reg = /([^?&=]+)=([^?&=]*)/g;
 	    	
 	    search.replace(reg, function (rs, $1, $2) {
 	        var name = decodeURIComponent($1);

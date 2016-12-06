@@ -1,7 +1,7 @@
 var companyObj = {
 	'Google' : {
 		nid : 'google',
-		slogen : '就成Google了（小心别被404哦～）'
+		slogen : '就成Google了,小心别被404哦'
 	},
 	'Apple' : {
 		nid : 'apple',
@@ -9,11 +9,11 @@ var companyObj = {
 	},
 	'Amazon' : {
 		nid : 'amazon',
-		slogen : '成为用无人机送快递的男人'
+		slogen : '就可以用无人机送快递了'
 	},
 	'Facebook' : {
 		nid : 'facebook',
-		slogen : '就能和扎克伯格一起学中文了'
+		slogen : '就和扎克伯格一起学中文了'
 	},
 	'Microsoft' : {
 		nid : 'microsoft',
@@ -21,23 +21,23 @@ var companyObj = {
 	},
 	'Airbnb' : {
 		nid : 'airbnb',
-		slogen : '就能穿越整个世界去睡TA'
+		slogen : '就能穿越整个世界去睡TA了'
 	},
 	'富土康' : {
 		nid : 'fusikang',
-		slogen : '可以和张全蛋一起接待外宾'
+		slogen : '就和张全蛋一起接待外宾了'
 	},
 	'宝洁' : {
 		nid : 'pg',
-		slogen : '争取一个卖洗发水的资格'
+		slogen : '去争取一个卖洗发水的资格'
 	},
 	'华为' : {
 		nid : 'huawei',
-		slogen : '争取加入华为阿非利加洲外派大军'
+		slogen : '就加入阿非利加洲外派大军'
 	},
 	'阿里巴巴' : {
 		nid : 'alibaba',
-		slogen : '和马云一起笑傲江湖'
+		slogen : '和马云一起笑傲江湖了'
 	},
 	'百度' : {
 		nid : 'baidu',
@@ -45,18 +45,18 @@ var companyObj = {
 	},
 	'公务员' : {
 		nid : 'gongwuyuan',
-		slogen : '考上全世界最神圣的职业。祝福你！'
+		slogen : '考上了全世界最神圣的职业'
 	},
 	'腾讯' : {
 		nid : 'tengxun',
-		slogen : '考上全世界最神圣的职业。祝福你！'
+		slogen : '就可以送朋友一年的会员了'//'就可以送朋友Q币和4个太阳的QQ了'
 	}
 };
 
 $(function(){
 	window.onload = function() {
 		$( '.ui-loading' ).addClass( 'fn-hide' );
-		$( '.ui-result-detail' ).removeClass( 'fn-hide' ).addClass( 'ui-animate-round' );
+		$( '.ui-result-detail' ).removeClass( 'fn-hide' ).addClass( 'animated zoomInDown' );
 	};
 	
 	function ResultShare( ) {
@@ -121,7 +121,7 @@ $(function(){
 	    
 	    var search = url.substring( url.lastIndexOf( '?' ) + 1 ),
 	    	obj = {},
-	    	reg = /([^?&=]+)=([^?&=]*)/g;
+	    	reg = /([^?&=]+)=([^?&=#]*)/g;
 	    	
 	    search.replace(reg, function (rs, $1, $2) {
 	        var name = decodeURIComponent($1);

@@ -1,0 +1,553 @@
+/*base*/
+html, body, div, span, a, ul, li, p, img, header, footer, section {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, body, div {
+    -webkit-text-size-adjust: none;
+}
+
+html, body {
+	width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "microsoft yahei",arial, sans-serif;
+}
+
+header, footer, section {
+	display: block;	
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.fn-hide {
+	display: none;
+}
+
+/*result*/
+.ui-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.ui-content {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 600px;
+}
+
+.ui-loading {
+	width: 100%;
+    height: 60%;
+    background: url(../img/loading.gif) no-repeat 50%;
+    background-size: 1.2em;
+}
+
+.ui-result {
+	background: url(../img/bg_result.jpg) no-repeat 0%;
+	background-size: 100% 100%;
+}
+
+.ui-share-name {
+	display: inline-block;
+	vertical-align: middle;
+    max-width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-company-name {
+	/*display: inline-block;*/
+}
+
+.ui-result-titleframe {
+	position: relative;
+	width: 100%;
+    height: 17%;
+    background: url(../img/resultTitle.png) no-repeat 0%;
+    background-size: 100% auto;
+}
+
+.ui-title {
+	position: absolute;
+	top: 43%;
+	color: #FFF;
+	text-align: center;
+	width: 100%;
+	font-size: 160%;
+}
+
+.ui-result-detail {
+	color: #fff;
+	height: 62%;
+	margin: 2% 0;
+}
+
+.ui-detail-card {
+	position: relative;
+	width: 70%;	
+	height: 100%;
+	margin: 0 auto;
+	border: 3px solid #fff;
+	background-color: #1DA0EE;
+}
+
+.ui-card-title {
+	height: 36px;
+    line-height: 36px;
+	padding: 2% 10px;
+}
+
+.ui-card-star {
+	position: relative;
+	font-size: 12px;
+ 	height: 30px;
+    line-height: 30px;
+    padding: 1% 10px;
+}
+
+.ui-star-list {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 2% 10px;
+}
+
+.ui-star-light {
+	background: url(../img/star_light.png) no-repeat 50% !important;
+	background-size: 1em !important;
+}
+
+.ui-star-list li {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url(../img/star_gray.png) no-repeat 50%;
+	background-size: 1em;
+}
+
+.ui-card-photolayout {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.ui-card-photo {
+	width: 90%;
+}
+
+/*google*/
+.ui-detail-card[data-company="google"] {
+	border-color: #002987;
+    background-color: #4b80fa;
+}
+
+.ui-detail-card[data-company="google"] > .ui-card-title {
+	background: url(../img/logo/google.png) no-repeat 95% 50%;
+    background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="google"] > .ui-nav {
+	background-color: #346df0;
+}
+
+.ui-detail-card[data-company="google"] > .ui-card-photo {
+	border-color: #b7ccfd;
+	background: url(../img/company/google.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*apple*/
+.ui-detail-card[data-company="apple"] {
+	border-color: #000000;
+    background-color: #203b59;
+}
+
+.ui-detail-card[data-company="apple"] > .ui-card-title {
+	background: url(../img/logo/apple.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="apple"] > .ui-nav {
+	background-color: #001329;
+}
+
+.ui-detail-card[data-company="apple"] > .ui-card-photo {
+	background: url(../img/company/apple.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*Amazon*/
+.ui-detail-card[data-company="amazon"] {
+	border-color: #000000;
+    background-color: #203b59;
+}
+
+.ui-detail-card[data-company="amazon"] > .ui-card-title {
+	background: url(../img/logo/amazon.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="amazon"] > .ui-nav {
+	background-color: #001329;
+}
+
+.ui-detail-card[data-company="amazon"] > .ui-card-photo {
+	background: url(../img/company/amazon.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*Facebook*/
+.ui-detail-card[data-company="facebook"] {
+	border-color: #142c73;
+    background-color: #3b56a5;
+}
+
+.ui-detail-card[data-company="facebook"] > .ui-card-title {
+	background: url(../img/logo/facebook.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="facebook"] > .ui-nav {
+	background-color: #243d86;
+}
+
+.ui-detail-card[data-company="facebook"] > .ui-card-photo {
+	background: url(../img/company/facebook.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*Microsoft*/
+.ui-detail-card[data-company="microsoft"] {
+	border-color: #003c86;
+    background-color: #3281e1;
+}
+
+.ui-detail-card[data-company="microsoft"] > .ui-card-title {
+	background: url(../img/logo/microsoft.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="microsoft"] > .ui-nav {
+	background-color: #005ed1;
+}
+
+.ui-detail-card[data-company="microsoft"] > .ui-card-photo {
+	background: url(../img/company/microsoft.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*Airbnb*/
+.ui-detail-card[data-company="airbnb"] {
+	border-color: #590003;
+    background-color: #ae323b;
+}
+
+.ui-detail-card[data-company="airbnb"] > .ui-card-title {
+	background: url(../img/logo/airbnb.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="airbnb"] > .ui-nav {
+	background-color: #950f14;
+}
+
+.ui-detail-card[data-company="airbnb"] > .ui-card-photo {
+	background: url(../img/company/airbnb.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*fusikang*/
+.ui-detail-card[data-company="fusikang"] {
+	border-color: #142c73;
+    background-color: #3b56a5;
+}
+
+.ui-detail-card[data-company="fusikang"] > .ui-card-title {
+	background: url(../img/logo/fusikang.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="fusikang"] > .ui-nav {
+	background-color: #243d86;
+}
+
+.ui-detail-card[data-company="fusikang"] > .ui-card-photo {
+	background: url(../img/company/fusikang.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*pg*/
+.ui-detail-card[data-company="pg"] {
+	border-color: #003c86;
+    background-color: #3281e1;
+}
+
+.ui-detail-card[data-company="pg"] > .ui-card-title {
+	background: url(../img/logo/pg.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="pg"] > .ui-nav {
+	background-color: #005ed1;
+}
+
+.ui-detail-card[data-company="pg"] > .ui-card-photo {
+	background: url(../img/company/pg.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*huawei*/
+.ui-detail-card[data-company="huawei"] {
+	border-color: #590003;
+    background-color: #ae323b;
+}
+
+.ui-detail-card[data-company="huawei"] > .ui-card-title {
+	background: url(../img/logo/huawei.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="huawei"] > .ui-nav {
+	background-color: #950f14;
+}
+
+.ui-detail-card[data-company="huawei"] > .ui-card-photo {
+	background: url(../img/company/huawei.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*alibaba*/
+.ui-detail-card[data-company="alibaba"] {
+	border-color: #592a00;
+    background-color: #e48028;
+}
+
+.ui-detail-card[data-company="alibaba"] > .ui-card-title {
+	background: url(../img/logo/alibaba.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="alibaba"] > .ui-nav {
+	background-color: #da6100;
+}
+
+.ui-detail-card[data-company="alibaba"] > .ui-card-photo {
+	background: url(../img/company/alibaba.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*baidu*/
+.ui-detail-card[data-company="baidu"] {
+	border-color: #003c86;
+    background-color: #3281e1;
+}
+
+.ui-detail-card[data-company="baidu"] > .ui-card-title {
+	background: url(../img/logo/baidu.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="baidu"] > .ui-nav {
+	background-color: #005ed1;
+}
+
+.ui-detail-card[data-company="baidu"] > .ui-card-photo {
+	background: url(../img/company/baidu.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*gongwuyuan*/
+.ui-detail-card[data-company="gongwuyuan"] {
+	border-color: #590003;
+    background-color: #ae323b;
+}
+
+.ui-detail-card[data-company="gongwuyuan"] > .ui-card-title {
+	background: url(../img/logo/gongwuyuan.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="gongwuyuan"] > .ui-nav {
+	background-color: #950f14;
+}
+
+.ui-detail-card[data-company="gongwuyuan"] > .ui-card-photo {
+	background: url(../img/company/gongwuyuan.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+/*tengxun*/
+.ui-detail-card[data-company="tengxun"] {
+	border-color: #003c86;
+    background-color: #3281e1;
+}
+
+.ui-detail-card[data-company="tengxun"] > .ui-card-title {
+	background: url(../img/logo/tengxun.png) no-repeat 92% 50%;
+	background-size: 1.3em;
+}
+
+.ui-detail-card[data-company="tengxun"] > .ui-nav {
+	background-color: #005ed1;
+}
+
+.ui-detail-card[data-company="tengxun"] > .ui-card-photo {
+	background: url(../img/company/tengxun.png) no-repeat 50%;
+	background-size: 100%;
+}
+
+.ui-card-suggest {
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 1% 0px;
+}
+
+.ui-space-slogenTitle {
+	padding: 1% 10px 0px 10px;
+}
+
+.ui-space-slogen {
+	padding: 1% 10px;
+	color: rgba(255,255,255,0.8);
+}
+
+.ui-btn-layout {
+	text-align: center;
+	width: 100%;
+	margin-top: 5%;
+}
+
+.ui-btn {
+	display: inline-block;
+	color: #288eeb;
+	width: 86%;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 1px 1px 2px #353535;
+	box-shadow: 1px 1px 2px #353535;
+}
+
+@media (max-width: 320px) {
+	.ui-result-titleframe {
+		background-position-x: 50%;
+	    background-size: 96% auto;
+    }
+    .ui-star-list li {
+    	width: 9px;
+	    height: 9px;
+	    background-size: 0.8em;
+    }
+    .ui-star-light {
+    	background-size: 0.8em !important;
+    }
+	.ui-detail-card {
+    	width: 68%;
+    }
+    .ui-card-photo {
+	    width: 88%;
+	}
+	.ui-btn {
+	    width: 82%;
+    }
+    .ui-result-detail {
+	    height: 63%;
+	}
+}
+
+.ui-footer {
+	position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.ui-footer-hr {
+	position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: rgba(220, 218, 218, 0.1);
+    z-index: -1;
+}
+
+.ui-footer-copyright {
+    color: rgba(220, 218, 218, 0.9);
+    width: 40%;
+    margin: 10px auto;
+    font-size: 70%;
+    text-align: center;
+    background-color: #3170E1;
+}
+
+/*卡片动画*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+.zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
+}
